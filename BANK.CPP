@@ -1,9 +1,14 @@
 /* ----HEADER FILES---- */
-#include<fstream.h>
+#include<fstream>
 #include<ctype.h>
-#include<iomanip.h>
+#include<iomanip>
 #include<conio.h>
 #include<stdio.h>
+#include<stdlib.h>
+#include<cstdio>
+#include<iostream>
+using namespace std;
+using std::endl;
 
 /* ----CLASSES---- */
 class account
@@ -25,7 +30,7 @@ public:
 };
 
 void account::create_acc()
-{ clrscr();
+{ system("cls");
   cout<<"\n\t CREATING A NEW ACCOUNT";
   cout<<"\n\t~~~~~~~~~~~~~~~~~~~~~~~~"<<"\n";
   cout<<"\n\tEnter the Account Number : ";
@@ -39,7 +44,7 @@ void account::create_acc()
 }
 
 void account::show_acc()
-{ clrscr();
+{ system("cls");
   cout<<"\n\n\t ACCOUNT DETAILS ";
   cout<<"\n\t~~~~~~~~~~~~~~~~~~~~~";
   cout<<"\n\t Account Number      : "<<acno;
@@ -50,7 +55,7 @@ void account::show_acc()
 }
 
 void account::modify_acc()
-{clrscr();
+{system("cls");
  cout<<"\n Account Number : "<<acno;
  cout<<"\n\t Enter the Name of the Account Holder : ";
  gets(name);
@@ -61,28 +66,28 @@ void account::modify_acc()
 }
 
 void account::deposit(int x)
-{ clrscr();
+{ system("cls");
   dep=dep+x; }
 
 void account::withdraw(int x)
-{ clrscr();
+{ system("cls");
   dep=dep-x; }
 
 void account::report()
-{clrscr();
+{system("cls");
  cout<<"\t   "<<acno<<"\t   "<<name<<"\t    "<<type<<"\t  "<<dep<<"\n";
 }
 
 int account::retacno()
-{ clrscr();
+{ system("cls");
   return acno;  }
 
 int account::retdeposit()
-{ clrscr();
+{ system("cls");
   return dep;   }
 
 char account::type_acc()
-{ clrscr();
+{ system("cls");
   return type;  }
 
 /* ----DECLARING FUNCTIONS----*/
@@ -94,13 +99,13 @@ char account::type_acc()
  void dep_withdraw(int,int); //To deposit or withdraw
  void intro();               //Introduction screen
 /* ----MAIN FUNCTION---- */
-void main()
+int main()
 { char a;
   int num,ch;
-  clrscr();
+  system("cls");
   intro();
 do
-{ clrscr();
+{ system("cls");
  cout<<"\n\n\t MENU ";
  cout<<"\n\t~~~~~~~~~~\n";
  cout<<"\n\n\t1) CREATE NEW ACCOUNT";
@@ -144,7 +149,7 @@ do
  default:
     cout<<"\n\t\t INPUT INVALID ";
 }
-clrscr();
+system("cls");
   cout<<"\n\n\t\t################################################## ";
     cout<<"\n\n\t\t## THANKS FOR USING MY BANK MANAGMENT SOFTWARE ## ";
     cout<<"\n\n\t\t################################################## ";
@@ -153,6 +158,8 @@ cout<<"\n\n\n\n\n\t     TO CONTINUE  ==> PRESS'Y'";
 cout<<"\n\n\t     TO EXIT      ==> PRESS ANY KEY"<<endl;
  cin>>a;
 }while(a=='Y'||a=='y');
+
+return 0;
 }
 
 /* ----FUNCTIONS---- */
@@ -361,7 +368,7 @@ void dep_withdraw(int n,int option)   //Function to deposit and withdraw from ac
    }
 }
 
-void intro()     //Function for introductory page\
+void intro()     //Function for introductory page
 {
  cout<<"\n      __________________________________________________________________";
 
@@ -373,11 +380,11 @@ void intro()     //Function for introductory page\
      cout<<"\n\t\t\t     --------------";
      cout<<"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
 
-   cout<<"\n\n\t NAME  :  Bhavya Sharma\t
+   cout<<"\n\n\t NAME  :  Bhavya Sharma\t";
   
    cout<<"\n\n\t Press Any Key to Start";
    getch();
-   clrscr();
+   system("cls");
 
  cout<<"\n ----------------------------------------------------------------------";
  cout<<"\n ----------------------------------------------------------------------";
@@ -391,14 +398,3 @@ void intro()     //Function for introductory page\
  cout<<"\n\n Press Any Key:   ";
  getch();
 }
-
-
-
-
-
-
-
-
-
-
-
