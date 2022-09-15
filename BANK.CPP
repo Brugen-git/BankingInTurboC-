@@ -376,11 +376,7 @@ void intro()     //Function for introductory page
    cout<<"\n\n\t\t\t  =====================  ";
      cout<<"\n\t\t\t# INVESTIGATORY PROJECT #";
    cout<<"\n\n\t\t\t  =====================  ";
-   cout<<"\n\n\t\t\t     Contributor:-";
-     cout<<"\n\t\t\t     --------------";
-     cout<<"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
 
-   cout<<"\n\n\t NAME  :  Bhavya Sharma\t";
   
    cout<<"\n\n\t Press Any Key to Start";
    getch();
